@@ -1,9 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_start_size(void)
-int get_end_size(int start_size)
-int calculate_years(int start, int end)
+int get_start_size(void);
+int get_end_size(int start_size);
+int calculate_years(int start, int end);
 
 int main(void)
 {
@@ -14,10 +14,10 @@ int main(void)
     int end = get_end_size(start);
 
     // TODO: Calculate number of years until we reach threshold
-    int years = calculate_years(start, end)
+    int years = calculate_years(start, end);
 
     // TODO: Print number of years
-    printf("Years :%i", years);
+    printf("Years: %i", years);
 }
 
 int get_start_size(void)
@@ -25,10 +25,10 @@ int get_start_size(void)
     int n;
     do
     {
-        n = get_int("Start size: ")
+        n = get_int("Start size: ");
     }
-    while (n < 9)
-    return n
+    while (n < 9);
+    return n;
 }
 
 int get_end_size(int start)
@@ -36,19 +36,19 @@ int get_end_size(int start)
     int n;
     do
     {
-        n = get_int("End size: ")
+        n = get_int("End size: ");
     }
-    while (n < start)
-    return n
+    while (n < start);
+    return n;
 }
 
 int calculate_years(int start, int end)
 {
-    int population = start_size;
+    int population = start;
     int years = 0;
-    while(population < end_size)
+    while (population < end)
     {
-        population += (population / 3) - (population / 4)
+        population += (population / 3) - (population / 4);
         years++;
     }
     return years;
